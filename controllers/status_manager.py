@@ -1,7 +1,8 @@
-# models/status.py
+# controllers/status.py
 
 import re
 import math
+
 
 class StatusManager:
     def __init__(self):
@@ -26,8 +27,8 @@ class StatusManager:
             encoded_value <<= 1
             if channel == toggle_channel:
                 encoded_value |= 1
+        print(bin(encoded_value))
         return encoded_value
-                
 
     def parse(self, status_code):
         # Convert status code to a binary value that has the same length as status_dict,
@@ -40,6 +41,3 @@ class StatusManager:
             self.status[channel_name] = status_code_bin[channel_index] == '1'
 
         print(f"Status code: {status_code_bin}")
-        print(f"Channel status:")
-        for channel_name, channel_status in self.status.items():
-            print(f"{channel_name}: {'ON' if channel_status else 'OFF'}")

@@ -20,8 +20,11 @@ class SerialManager:
             self.ser.close()
 
     def write(self, data):
+        # if self.ser and self.ser.is_open:
+        #     self.ser.write(str(data).encode())
         if self.ser and self.ser.is_open:
-            self.ser.write(str(data).encode())
+            packed_data = struct.pack('<I', data)
+            self.ser.write(packed_data)
 
     def read_status(self):
         try:
