@@ -13,7 +13,7 @@ class SerialManager:
         self.status = None
     
     def connect(self):
-        self.ser = serial.Serial(port='COM5', baudrate=9600)
+        self.ser = serial.Serial(port=self.port, baudrate=9600)
 
     def disconnect(self):
         if self.ser and self.ser.is_open:
@@ -31,4 +31,5 @@ class SerialManager:
             data = self.ser.read(4)
             self.status = struct.unpack('<I', data)[0]  # read command in binary
         except Exception as e:
+            print(data)
             raise Exception(f"Cannot parse the status in binary format: {e}")

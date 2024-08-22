@@ -6,7 +6,7 @@ from PyQt5.QtWidgets import QApplication
 from controllers import MainController
 
 
-SERIAL_PORT = 'COM5'
+SERIAL_PORT = 'COM3'
 BAUD_RATE = 9600
 
 if __name__ == '__main__':

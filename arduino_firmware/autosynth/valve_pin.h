@@ -35,4 +35,4 @@
 
 const uint8_t PIN_VALVE[] = {
     PIN_VALVE
-}
+};
