@@ -5,20 +5,20 @@ uint32_t status = 0;
 
 void setup()
 {
-    pinMode(PIN_VALVE_1, OUTPUT);
-    pinMode(PIN_VALVE_2, OUTPUT);
-    pinMode(PIN_VALVE_3, OUTPUT);
-    pinMode(PIN_VALVE_4, OUTPUT);
-    pinMode(PIN_VALVE_5, OUTPUT);
-    pinMode(PIN_VALVE_6, OUTPUT);
-    pinMode(PIN_VALVE_7, OUTPUT);
-    pinMode(PIN_VALVE_8, OUTPUT);
-    pinMode(PIN_VALVE_9, OUTPUT);
-    pinMode(PIN_VALVE_10, OUTPUT);
-    pinMode(PIN_VALVE_11, OUTPUT);
-    pinMode(PIN_VALVE_12, OUTPUT);
-    pinMode(PIN_VALVE_13, OUTPUT);
-    pinMode(PIN_VALVE_14, OUTPUT);
+    pinMode(PIN_L1, OUTPUT);
+    pinMode(PIN_L2, OUTPUT);
+    pinMode(PIN_L3, OUTPUT);
+    pinMode(PIN_L4, OUTPUT);
+    pinMode(PIN_L5, OUTPUT);
+    pinMode(PIN_L6, OUTPUT);
+    pinMode(PIN_L7, OUTPUT);
+    pinMode(PIN_G1, OUTPUT);
+    pinMode(PIN_G2, OUTPUT);
+    pinMode(PIN_G3, OUTPUT);
+    pinMode(PIN_G4, OUTPUT);
+    pinMode(PIN_G5, OUTPUT);
+    pinMode(PIN_HEATER_1, OUTPUT);
+    pinMode(PIN_VAC_PUMP, OUTPUT);
     pinMode(PIN_VALVE_15, OUTPUT);
     pinMode(PIN_VALVE_16, OUTPUT);
     pinMode(PIN_VALVE_17, OUTPUT);

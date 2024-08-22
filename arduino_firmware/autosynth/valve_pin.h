@@ -1,19 +1,19 @@
 //valve_pin.h
 
-#define PIN_VALVE_1   22
-#define PIN_VALVE_2   23
-#define PIN_VALVE_3   24
-#define PIN_VALVE_4   25
-#define PIN_VALVE_5   26
-#define PIN_VALVE_6   27
-#define PIN_VALVE_7   28
-#define PIN_VALVE_8   29
-#define PIN_VALVE_9   30
-#define PIN_VALVE_10  31
-#define PIN_VALVE_11  32
-#define PIN_VALVE_12  33
-#define PIN_VALVE_13  34
-#define PIN_VALVE_14  35
+#define PIN_L1   22
+#define PIN_L2   23
+#define PIN_L3   24
+#define PIN_L4   25
+#define PIN_L5   26
+#define PIN_L6   27
+#define PIN_L7   28
+#define PIN_G1   29
+#define PIN_G2   30
+#define PIN_G3  31
+#define PIN_G4  32
+#define PIN_G5  33
+#define PIN_HEATER_1  34
+#define PIN_VAC_PUMP  35
 #define PIN_VALVE_15  36
 #define PIN_VALVE_16  37
 #define PIN_VALVE_17  38

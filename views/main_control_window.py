@@ -5,7 +5,9 @@ from PyQt5.QtWidgets import (
     QLabel,
     QMainWindow,
     QVBoxLayout,
-    QWidget
+    QWidget,
+    QPushButton,
+    QGridLayout
 )
 from PyQt5.QtCore import QSize
 
