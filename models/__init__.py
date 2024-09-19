@@ -33,3 +33,7 @@ class SerialManager:
         except Exception as e:
             print(data)
             raise Exception(f"Cannot parse the status in binary format: {e}")
+        
+    def send_command(self, command_code):
+        packed_command = struct.pack("<I", command_code)
+        self.write(packed_command)

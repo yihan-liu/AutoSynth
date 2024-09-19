@@ -3,6 +3,7 @@
 from views.main_control_window import MainControlWindow
 from models import SerialManager
 from .status_manager import StatusManager
+from .step_controller import StepController
 
 
 class MainController:
@@ -12,6 +13,7 @@ class MainController:
         self.main_control_window = MainControlWindow(self.status_manager.STATUS_DICT)
 
         self.connect_toggle_buttons()
+        self.connect_step_buttons()
 
     def connect_toggle_buttons(self):
         # TODO
@@ -19,6 +21,14 @@ class MainController:
             self.main_control_window.toggle_buttons[channel_name].clicked.connect(
                 lambda _, toggle_channel=channel_name: self.toggle_channel(toggle_channel)
             )
+
+    def connect_step_buttons(self):
+        for i, step_button in enumerate(self.main_control_window.step_buttons):
+            step_button.clicked.connect(lambda _, step_index=i: self.run_step(step_index))
+
+    def run_step(self, step_index):
+        print(f"Running step {step_index + 1}")
+        self.step_controller.run_step_1(step_index)
 
     def toggle_channel(self, toggle_channel):
         encoded_command = self.status_manager.encode(toggle_channel)
